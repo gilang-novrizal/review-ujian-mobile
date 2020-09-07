@@ -1,4 +1,4 @@
-import {LOGIN, LOGIN_END, LOGIN_START, LOGIN_ERROR, KEEP_LOGIN, KEEP_LOGIN_END, KEEP_LOGIN_START} from "../action/helper"
+import {LOGIN, LOGIN_END, LOGIN_START, LOGIN_ERROR, KEEP_LOGIN, KEEP_LOGIN_END, KEEP_LOGIN_START, LOGOUT} from "../action/helper"
 
 const INITIAL_STATE ={
     user_id: null,
@@ -54,6 +54,8 @@ const userReducer = (state = INITIAL_STATE, action)=>{
                         // status: action.payload.status,
                         // token: action.payload.token
                 }
+            case LOGOUT:
+                return INITIAL_STATE
             default:
                 return state
     }

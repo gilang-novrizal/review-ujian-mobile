@@ -1,13 +1,13 @@
 import { GET_DATA } from "../action/helper"
 
 const INITIAL_STATE = {
-    data: null
+    dataAPI: null
 }
 
 const apiReducer = (state = INITIAL_STATE, action)=>{
     switch(action.type){
         case GET_DATA:
-            return{...state, data: action.payload}
+            return{...state, dataAPI: action.payload.response}
         default:
             return state
     }

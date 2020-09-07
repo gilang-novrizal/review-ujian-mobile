@@ -1,4 +1,5 @@
 import React from 'react'
+import {Button} from "native-base"
 import {createDrawerNavigator} from "@react-navigation/drawer"
 
 // import screen
@@ -11,6 +12,7 @@ const DrawerNav = () =>{
         <Drawer.Navigator>
             <Drawer.Screen name="Account" component={Account}/>
             <Drawer.Screen name="Profile" component={Profile}/>
+            {/* <Button>Logout</Button> */}
         </Drawer.Navigator>
     )
 }

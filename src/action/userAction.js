@@ -1,5 +1,5 @@
 import Axios from "axios"
-import {LOGIN, LOGIN_START, LOGIN_END,KEEP_LOGIN, KEEP_LOGIN_START, KEEP_LOGIN_END,LOGIN_ERROR, URL} from "./helper"
+import {LOGIN, LOGIN_START, LOGIN_END,KEEP_LOGIN, KEEP_LOGIN_START, KEEP_LOGIN_END,LOGIN_ERROR, LOGOUT,URL} from "./helper"
 import AsyncStorage from '@react-native-community/async-storage';
 
 export const LoginAction = (body) =>{
@@ -41,6 +41,17 @@ export const keepLogin = ()=>{
         } catch (error) {
             console.log(error.response? error.response.data : error)
             dispatch({type: KEEP_LOGIN_END})
+        }
+    }
+}
+
+export const logOutAction = ()=>{
+    return async(dispatch)=>{
+        try {
+            await AsyncStorage.clear()
+            dispatch({type: LOGOUT})
+        } catch (error) {
+            console.log(error.response? error.response.data : error)
         }
     }
 }

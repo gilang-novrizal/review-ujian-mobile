@@ -6,7 +6,7 @@ export const getData = (body) =>{
         try {
             const res = await Axios({
                 "method":"GET",
-                "url":`https://covid-193.p.rapidapi.com/statistics?country=${body}`,
+                "url":"https://covid-193.p.rapidapi.com/statistics",
                 "headers":{
                 "content-type":"application/octet-stream",
                 "x-rapidapi-host":"covid-193.p.rapidapi.com",
@@ -14,6 +14,7 @@ export const getData = (body) =>{
                 "useQueryString":true
                 }
                 })
+            console.log(res)
             dispatch({type: GET_DATA, payload: res.data})
         } catch (error) {
             console.log(error.response? error.response.data : error)

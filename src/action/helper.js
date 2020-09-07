@@ -9,4 +9,6 @@ export const KEEP_LOGIN_START = "KEEP_LOGIN_START"
 export const KEEP_LOGIN_END = "KEEP_LOGIN_END"
 export const KEEP_LOGIN = "KEEP_LOGIN"
 
+export const LOGOUT = "LOGOUT"
+
 export const GET_DATA = "GET_DATA"
