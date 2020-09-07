@@ -1,7 +1,7 @@
 import { GET_DATA } from "../action/helper"
 
 const INITIAL_STATE = {
-    dataAPI: null
+    dataAPI: []
 }
 
 const apiReducer = (state = INITIAL_STATE, action)=>{

@@ -53,7 +53,6 @@ const Login = ({navigation}) =>{
             <Button 
                 light 
                 rounded 
-                loading
                 onPress={handleLogin}
                 style={styles.button}>
                  <Text>Login</Text>   

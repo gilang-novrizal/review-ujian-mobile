@@ -46,8 +46,8 @@ const Home = () =>{
                 <Table  borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
                     <Row data={tableHead} flexArr={[1, 1, 1, 1, 1]} style={styles.head}  textStyle={styles.text}/>
                     <TableWrapper style={styles.wrapper}>
-                        <Col data={dataAPI? renderTitle() : []}  style={styles.title} heightArr={[50,50]} textStyle={styles.text}/>
-                        <Rows data={dataAPI? renderData() : []}  flexArr={[1, 1, 1]} style={styles.row} textStyle={styles.text}/>
+                        <Col data={renderTitle()}  style={styles.title} heightArr={[50,50]} textStyle={styles.text}/>
+                        <Rows data={renderData()}  flexArr={[1, 1, 1]} style={styles.row} textStyle={styles.text}/>
                     </TableWrapper>
                 </Table>
             </ScrollView>
